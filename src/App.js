@@ -4,7 +4,7 @@ import Restaurant from './Pages/RrstaurantFrontPage'
 function App() {
   return (
     <div className="App">
-    <h2>Cooking Recipes </h2>
+    <h2>Restaurant Finder </h2>
 
       <Restaurant/>
     </div>
