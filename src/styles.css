@@ -1,0 +1,7 @@
+.inlineStyle {
+    display: inline-flex;
+  }
+  .gridlist{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }

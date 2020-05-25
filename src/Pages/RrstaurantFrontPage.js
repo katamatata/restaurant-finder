@@ -1,9 +1,7 @@
 import React from "react";
-import "./styles.css";
-import './App.css';
+import "../styles.css";
 
 import RestaurantNList from "../Components/RestaurantNameList";
-import ShortRating from "../Components/shortRating";
 
 class Restaurant extends React.Component {
   state = {
@@ -30,11 +28,10 @@ class Restaurant extends React.Component {
         <div style={{ textAlign: "center" }}>
           <button onClick={this.loadData}>Search</button>
         </div>
-        <div className="gridList">
+        <div >
           {restaurantNameList.map(itemObject => (
-           <div>
+           <div className="gridlist">
            <RestaurantNList {...itemObject} />
-            <ShortRating {...itemObject} />
 </div>
           ))}
         </div>
