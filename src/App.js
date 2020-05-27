@@ -29,7 +29,7 @@ function App() {
             component={() => "todo: insert component with list of restaurants"}
           />
           <Route
-            path="/restaurants/:id"
+            path="/:id"
             component={() => "todo: insert restaurant component"}
           />
         </Switch>
