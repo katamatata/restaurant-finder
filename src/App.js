@@ -26,11 +26,11 @@ function App() {
           <Route
             path="/"
             exact
-            component={"todo: insert component with list of restaurants"}
+            component={() => "todo: insert component with list of restaurants"}
           />
           <Route
             path="/restaurants/:id"
-            component={"todo: insert restaurant component"}
+            component={() => "todo: insert restaurant component"}
           />
         </Switch>
       </div>
