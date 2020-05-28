@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Restaurant from "./pages/RrstaurantFrontPage";
-function App() {
+import Restaurant from "./pages/RestaurantFrontPage";
+function App(){
   return (
     <BrowserRouter>
       <div className="App">

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles.css";
 
-import RestaurantNList from "../components/RestaurantNameList";
+import RestaurantNameList from "../components/RestaurantNameList";
 
 class Restaurant extends React.Component {
   state = {
@@ -31,7 +31,7 @@ class Restaurant extends React.Component {
         <div >
           {restaurantNameList.map(itemObject => (
             <div className="gridlist">
-              <RestaurantNList {...itemObject} />
+              <RestaurantNameList {...itemObject} />
             </div>
           ))}
         </div>

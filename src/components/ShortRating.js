@@ -6,7 +6,6 @@ const ShortRating = props => {
     <div>
       <div className="inlineStyle">
         <text > rating </text>
-
         <img src={starImage} alt="star" style={{ width: "15px", height: "15px" }} />
         <text>{props.rating}/5({props.user_ratings_total})</text>
       </div>

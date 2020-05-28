@@ -5,33 +5,19 @@ import mapImage from "../image/map.png";
 import starImage from "../image/star1.png";
 
 
-const text = {
-  fontFamily: "sans-serif",
-  fontsize: "15px",
-  textalign: "left",
-  width: "50px",
-  height: "120px"
-};
-
-const NameList = props => {
+const RestaurantNameList = props => {
   return (
     <div >
       <div className="nameList">
         <text-corner> {props.readyInMinutes}mint</text-corner>
-
         <img
           className="restaurant-image"
           src={props.icon ? props.icon : errorImage}
           alt="icon"
         />{" "}
-
-
       </div>
       <text > {props.name} </text>{" "}
-
       <div className="inlineStyle" style={{ marginLeft: "5px" }}>
-        {/* <text > rating </text> */}
-
         <img src={starImage} alt="star" style={{ width: "15px", height: "15px" }} />
         <text>{props.rating}/5({props.user_ratings_total})</text>
       </div>
@@ -41,13 +27,9 @@ const NameList = props => {
           target="_blank" >
           <img src={mapImage} alt="map" style={{ width: "20px", height: "20px" }} />
         </a>
-
-
       </div>
-
-
     </div>
   );
 };
 
-export default NameList;
+export default RestaurantNameList;
