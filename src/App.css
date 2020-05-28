@@ -1,8 +1,5 @@
 .App {
-  text-align: left;
-
-
-
+  text-align: center;
 }
 
 .App-logo {
@@ -39,12 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.inlineStyle {
-  display: inline-flex;
-}
-.gridlist{
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-}
-
