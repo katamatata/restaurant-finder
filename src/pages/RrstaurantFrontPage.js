@@ -30,9 +30,9 @@ class Restaurant extends React.Component {
         </div>
         <div >
           {restaurantNameList.map(itemObject => (
-           <div className="gridlist">
-           <RestaurantNList {...itemObject} />
-</div>
+            <div className="gridlist">
+              <RestaurantNList {...itemObject} />
+            </div>
           ))}
         </div>
         {/* end return */}

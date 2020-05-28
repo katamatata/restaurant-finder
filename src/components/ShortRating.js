@@ -4,15 +4,13 @@ import starImage from "../image/star1.png";
 const ShortRating = props => {
   return (
     <div>
+      <div className="inlineStyle">
+        <text > rating </text>
 
-<div className="inlineStyle">
-<text > rating </text>
-
-<img src = {starImage} alt="star" style={{width:"15px", height:"15px"}} />
-<text>{props.rating}/5({props.user_ratings_total})</text>
-</div>
-
-</div>
+        <img src={starImage} alt="star" style={{ width: "15px", height: "15px" }} />
+        <text>{props.rating}/5({props.user_ratings_total})</text>
+      </div>
+    </div>
   );
 };
 
