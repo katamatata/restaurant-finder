@@ -1,7 +1,12 @@
 import React from "react";
 
+import { ContentWrapper } from '../../common';
+import { HeaderWrapper, Logo } from './HeaderElements';
+
 export const Header = () => (
-  <div>
-    <h1>Logo</h1>
-  </div>
+  <HeaderWrapper>
+   <ContentWrapper>
+    <Logo src='./logo.png' alt="Logo" />
+   </ContentWrapper>
+  </HeaderWrapper>
 );
