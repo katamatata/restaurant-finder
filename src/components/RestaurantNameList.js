@@ -14,15 +14,15 @@ const RestaurantNameList = props => {
           className="restaurant-image"
           src={props.icon ? props.icon : errorImage}
           alt="icon"
-        />{" "}
+        />
       </div>
-      <text > {props.name} </text>{" "}
+      <text > {props.name} </text>
       <div className="inlineStyle" style={{ marginLeft: "5px" }}>
         <img src={starImage} alt="star" style={{ width: "15px", height: "15px" }} />
         <text>{props.rating}/5({props.user_ratings_total})</text>
       </div>
       <div className="inlneStyle">
-        <text > {props.formatted_address} </text>{" "}
+        <text > {props.formatted_address} </text>
         <a href={props.photos[0].html_attributions[0]} rel="noopener noreferrer"
           target="_blank" >
           <img src={mapImage} alt="map" style={{ width: "20px", height: "20px" }} />

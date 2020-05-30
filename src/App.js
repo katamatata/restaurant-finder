@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Restaurant from "./pages/RestaurantFrontPage";
+import RestaurantsListingPage from "./pages/RestaurantFrontPage";
 function App(){
   return (
     <BrowserRouter>
@@ -10,7 +10,7 @@ function App(){
           <Route
             path="/"
             exact
-            component={Restaurant}
+            component={RestaurantsListingPage}
           />
           <Route
             path="/:id"

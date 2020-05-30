@@ -21,7 +21,7 @@
     left: 85%;
     border: 1px solid;
     border-radius: 40px;
-    background: rgb(224, 174, 129);
+    background: rgb(233, 235, 168);
   }
   
   .inlineStyle {
@@ -30,9 +30,16 @@
     text-align: left;
 
   }
-  /* text {
+  text {
     font-size: 15px;
     text-align: left;
     width: 120px;
-  } */
+  } 
+  .header-style{
+    text-align: center;
+    height: 150px;
+    border: 1px dotted black;
+    border-radius: 10px;
+    margin: 30px;
+  }
   

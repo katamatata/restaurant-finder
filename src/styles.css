@@ -5,3 +5,9 @@
     display: inline-grid;
     grid-template-columns: auto auto auto;
   }
+  .nameListContainerStyle{
+    text-align: center;
+    width: 85%;
+    position: relative;
+    left: 10%;
+  }

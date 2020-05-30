@@ -17,7 +17,6 @@ class Restaurant extends React.Component {
     this.setState({
       restaurantNameList: data.results
     });
-    console.log(data.results);
   };
 
   render() {
@@ -25,17 +24,18 @@ class Restaurant extends React.Component {
 
     return (
       <div>
-        <div style={{ textAlign: "center" }}>
-          <button onClick={this.loadData}>Search</button>
+        <div className="header-style">
+          <h2>Restaurant Finder</h2>
+          <button onClick={this.loadData}> Search </button>
+        
         </div>
-        <div >
+        <div className="nameListContainerStyle" >
           {restaurantNameList.map(itemObject => (
             <div className="gridlist">
               <RestaurantNameList {...itemObject} />
             </div>
           ))}
         </div>
-        {/* end return */}
       </div>
     );
   }
