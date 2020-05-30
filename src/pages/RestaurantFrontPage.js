@@ -2,8 +2,9 @@ import React from "react";
 import "../styles.css";
 
 import RestaurantNameList from "../components/RestaurantNameList";
+import FilterPage from "./FilterPage";
 
-class Restaurant extends React.Component {
+class RestaurantFrontPage extends React.Component {
   state = {
     restaurantNameList: []
   };
@@ -25,10 +26,11 @@ class Restaurant extends React.Component {
     return (
       <div>
         <div className="header-style">
-          <h2>Restaurant Finder</h2>
+          <h2>RestaurantFrontPage Finder</h2>
           <button onClick={this.loadData}> Search </button>
-        
+
         </div>
+        <FilterPage/>
         <div className="nameListContainerStyle" >
           {restaurantNameList.map(itemObject => (
             <div className="gridlist">
@@ -41,5 +43,5 @@ class Restaurant extends React.Component {
   }
 }
 
-export default Restaurant;
+export default RestaurantFrontPage;
 

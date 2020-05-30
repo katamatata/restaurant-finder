@@ -11,3 +11,12 @@
     position: relative;
     left: 10%;
   }
+  .filter-content{
+    display: inline-flex;
+    padding: 15px;
+    /* background-color: rgb(122, 240, 185); */
+    width: 85%;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
