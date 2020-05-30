@@ -1,0 +1,8 @@
+{
+  "extends": ["prettier", "airbnb"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "template-tag-spacing": ["error", "never"]
+  }
+}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from './components/Header';
-import HomepageImage from './components/HomepageImage';
+import Header from "./components/Header";
+import HomepageImage from "./components/HomepageImage";
 
 const App = () => (
   <BrowserRouter>
@@ -11,7 +11,8 @@ const App = () => (
       <Route path="/" exact>
         <HomepageImage />
       </Route>
-      <Route path="/:id"
+      <Route
+        path="/:id"
         component={() => "todo: insert restaurant component"}
       />
     </Switch>
