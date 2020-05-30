@@ -26,7 +26,7 @@ class RestaurantFrontPage extends React.Component {
     return (
       <div>
         <div className="header-style">
-          <h2>RestaurantFrontPage Finder</h2>
+          <h2>Favourite Food Finder</h2>
           <button onClick={this.loadData}> Search </button>
 
         </div>
