@@ -30,7 +30,7 @@ class RestaurantFrontPage extends React.Component {
           <button onClick={this.loadData}> Search </button>
 
         </div>
-        <FilterPage/>
+        <FilterPage />
         <div className="nameListContainerStyle" >
           {restaurantNameList.map(itemObject => (
             <div className="gridlist">

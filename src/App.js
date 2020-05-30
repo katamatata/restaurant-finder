@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import RestaurantsListingPage from "./pages/RestaurantFrontPage";
-function App(){
+function App() {
   return (
     <BrowserRouter>
       <div className="App">
