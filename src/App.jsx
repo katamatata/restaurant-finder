@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
+import RestaurantList from "./components/RestaurantList";
 import Header from "./components/Header";
 import HomepageImage from "./components/HomepageImage";
 
@@ -10,6 +10,7 @@ const App = () => (
     <Switch>
       <Route path="/" exact>
         <HomepageImage />
+        <RestaurantList />;
       </Route>
       <Route
         path="/:id"
