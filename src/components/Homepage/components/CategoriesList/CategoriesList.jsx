@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ContentWrapper } from "../../common";
+import { ContentWrapper } from "../../../../common/ContentWrapper";
 
 import { CategoriesWrapper, Category } from "./CategoriesListElements";
 
