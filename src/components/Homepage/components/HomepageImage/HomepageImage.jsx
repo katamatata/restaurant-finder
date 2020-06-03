@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ImageWrapper, H1 } from "./HomepageImageElements";
-import { ContentWrapper } from "../../common";
+import { ContentWrapper } from "../../../../common/ContentWrapper";
 
 export const HomepageImage = () => (
   <ImageWrapper>

@@ -1,6 +1,6 @@
 import React from "react";
 import { ListWrapper } from "./RestaurantListElements";
-import { LIST_EXAMPLE } from "../../common/ListExample.jsx";
+import { LIST_EXAMPLE } from "../../../../common/ListExample";
 
 export const RestaurantList = () => {
   return (
