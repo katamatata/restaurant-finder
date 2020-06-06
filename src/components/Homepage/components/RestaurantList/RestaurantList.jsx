@@ -21,7 +21,7 @@ export const RestaurantList = (props) => {
 
   React.useEffect(() => {
     setSearchValue(props.searchValue);
-  }, [props]);
+  }, [props.searchValue]);
 
   const filterRestaurantsSearchBar = (item) => {
     if (searchValue !== "") {

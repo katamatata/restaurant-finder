@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ImageWrapper = styled.div`
+export const Wrapper = styled.div`
   padding-left: 5rem;
   padding-right: 5rem;
   background-color: orange;

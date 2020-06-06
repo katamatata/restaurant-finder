@@ -6,12 +6,10 @@ import RestaurantList from "./components/RestaurantList";
 
 export const Homepage = () => {
   const [searchValue, setSearchValue] = React.useState("");
-  const handleSearchValue = (input) => {
-    setSearchValue(input);
-  };
+
   return (
     <div>
-      <HomepageImage handleSearchValue={handleSearchValue} />
+      <HomepageImage setSearchValue={setSearchValue} />
       <CategoriesList />
       <RestaurantList searchValue={searchValue} />
     </div>
