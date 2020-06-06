@@ -1,3 +1,9 @@
 import React from "react";
 
-export const RestaurantPage = () => <div>Restaurant</div>;
+import RestaurantInfo from "./components/RestaurantInfo";
+
+export const RestaurantPage = () => (
+  <div>
+    <RestaurantInfo />
+  </div>
+);
