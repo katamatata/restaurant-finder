@@ -8,5 +8,11 @@ export const ListWrapper = styled.div`
   background-color: Snow;
   padding-left: 4rem;
   padding-right: 2rem;
+  padding-bottom: 2rem;
   margin-bottom: 3rem;
+`;
+
+export const Loading = styled.img`
+  display: block;
+  margin: 30px auto;
 `;

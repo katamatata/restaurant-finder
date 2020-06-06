@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
+import RestaurantPage from "./components/RestaurantPage";
 
 const App = () => (
   <BrowserRouter>
@@ -11,10 +12,9 @@ const App = () => (
       <Route path="/" exact>
         <Homepage />
       </Route>
-      <Route
-        path="/:id"
-        component={() => "todo: insert restaurant component"}
-      />
+      <Route path="/:id">
+        <RestaurantPage />
+      </Route>
     </Switch>
   </BrowserRouter>
 );
