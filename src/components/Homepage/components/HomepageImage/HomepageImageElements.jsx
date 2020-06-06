@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const ImageWrapper = styled.div`
+  padding-left: 5rem;
+  padding-right: 5rem;
   background-color: orange;
-  padding: 120px 0;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `;
 
 export const H1 = styled.h1`
