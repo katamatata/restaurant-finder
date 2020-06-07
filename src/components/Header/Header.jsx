@@ -1,13 +1,15 @@
 import React from "react";
 
 import { ContentWrapper } from "../../common";
-
 import { HeaderWrapper, Logo } from "./HeaderElements";
+import { Link } from "react-router-dom";
 
 export const Header = () => (
   <HeaderWrapper>
     <ContentWrapper>
-      <Logo src="./logo.png" alt="Logo" />
+      <Link to="/">
+        <Logo src="./logo.png" alt="Logo" />
+      </Link>
     </ContentWrapper>
   </HeaderWrapper>
 );

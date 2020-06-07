@@ -1,22 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import {
   RestaurantCardWrapper,
   RestaurantName,
+  RestaurantAddress,
+  AddressImage,
+  AddressBlock,
 } from "./RestaurantCardElements";
 
 export const RestaurantCard = ({ card }) => {
-  const { id, name, icon } = card;
+  const { name, icon, formatted_address } = card;
 
   return (
-    <Link to={`/${id}`}>
-      <RestaurantCardWrapper>
-        <div>
-          <img src={icon} alt={name} />
-        </div>
-        <RestaurantName>{name}</RestaurantName>
-      </RestaurantCardWrapper>
-    </Link>
+    <RestaurantCardWrapper>
+      <div>
+        <img src={icon} alt={name} />
+      </div>
+      <RestaurantName>{name}</RestaurantName>
+      <AddressBlock>
+        <AddressImage src="./address.png" alt="Address" />
+        <RestaurantAddress>{formatted_address}</RestaurantAddress>
+      </AddressBlock>
+    </RestaurantCardWrapper>
   );
 };
