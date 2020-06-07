@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { ContentWrapper } from "../../../../common/ContentWrapper";
+
 import { ListWrapper, Loading } from "./RestaurantListElements";
 import RestaurantCard from "../RestaurantCard";
 
@@ -24,10 +26,12 @@ export const RestaurantList = () => {
   return loading ? (
     <Loading src="./loading.svg" />
   ) : (
-    <ListWrapper>
-      {restaurantList.map((item) => (
-        <RestaurantCard card={item} key={item.name} />
-      ))}
-    </ListWrapper>
+    <ContentWrapper>
+      <ListWrapper>
+        {restaurantList.map((item) => (
+          <RestaurantCard card={item} key={item.name} />
+        ))}
+      </ListWrapper>
+    </ContentWrapper>
   );
 };
