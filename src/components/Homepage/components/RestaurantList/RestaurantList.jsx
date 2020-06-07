@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import { ContentWrapper } from "../../../../common/ContentWrapper";
+import { ContentWrapper } from "../../../../common";
 
 import { ListWrapper, Loading } from "./RestaurantListElements";
 import RestaurantCard from "../RestaurantCard";
-import { Link } from "react-router-dom";
 
 const RESTAURANTS_API =
   "https://redi-final-restaurants.herokuapp.com/restaurants";
 
 export const RestaurantList = (props) => {
-  const [restaurantList, setRestaurantList] = React.useState([]);
+  const [restaurantList, setRestaurantList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchValue, setSearchValue] = React.useState(props.searchValue);
+  const [searchValue, setSearchValue] = useState(props.searchValue);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +25,7 @@ export const RestaurantList = (props) => {
     setLoading(false);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setSearchValue(props.searchValue);
   }, [props.searchValue]);
 
@@ -40,12 +40,15 @@ export const RestaurantList = (props) => {
   };
 
   return loading ? (
-    <Loading src="./loading.svg" />
+    <Loading src="./loading.svg" alt="Loading" />
   ) : (
     <ContentWrapper>
       <ListWrapper>
         {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
-          <Link to={`/${item.id}`} key={item.id}>
+          <Link
+            to={{ pathname: `/${item.id}`, state: { restaraunt: item } }}
+            key={item.id}
+          >
             <RestaurantCard card={item} key={item.id} />
           </Link>
         ))}
