@@ -1,12 +1,13 @@
 import React from "react";
 
-import { ImageWrapper, H1 } from "./HomepageImageElements";
-import { ContentWrapper } from "../../../../common/ContentWrapper";
+import { Wrapper, H1 } from "./HomepageImageElements";
+import SearchBar from "../SearchBar";
 
-export const HomepageImage = () => (
-  <ImageWrapper>
-    <ContentWrapper>
+export const HomepageImage = (props) => {
+  return (
+    <Wrapper>
       <H1>Your favourite food from the neighbourhood</H1>
-    </ContentWrapper>
-  </ImageWrapper>
-);
+      <SearchBar setSearchValue={props.setSearchValue} />
+    </Wrapper>
+  );
+};

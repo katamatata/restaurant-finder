@@ -5,11 +5,13 @@ import CategoriesList from "./components/CategoriesList";
 import RestaurantList from "./components/RestaurantList";
 
 export const Homepage = () => {
+  const [searchValue, setSearchValue] = React.useState("");
+
   return (
     <div>
-      <HomepageImage />
+      <HomepageImage setSearchValue={setSearchValue} />
       <CategoriesList />
-      <RestaurantList />
+      <RestaurantList searchValue={searchValue} />
     </div>
   );
 };

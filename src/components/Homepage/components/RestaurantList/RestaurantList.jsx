@@ -1,12 +1,14 @@
 import React from "react";
 import { ListWrapper } from "./RestaurantListElements";
 import RestaurantCard from "../RestaurantCard";
+import { Link } from "react-router-dom";
 
-export const RestaurantList = () => {
+export const RestaurantList = (props) => {
   const RESTAURANTS_API =
     "https://redi-final-restaurants.herokuapp.com/restaurants";
 
   const [restaurantList, setRestaurantList] = React.useState([]);
+  const [searchValue, setSearchValue] = React.useState(props.searchValue);
 
   React.useEffect(() => {
     async function fetchData() {
@@ -17,10 +19,26 @@ export const RestaurantList = () => {
     fetchData();
   }, []);
 
+  React.useEffect(() => {
+    setSearchValue(props.searchValue);
+  }, [props.searchValue]);
+
+  const filterRestaurantsSearchBar = (item) => {
+    if (searchValue !== "") {
+      return (
+        item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.cuisine.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    }
+    return item;
+  };
+
   return (
     <ListWrapper>
-      {restaurantList.map((item) => (
-        <RestaurantCard card={item} key={item.name} />
+      {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
+        <Link to={`/${item.id}`} key={item.id}>
+          <RestaurantCard card={item} key={item.id} />
+        </Link>
       ))}
     </ListWrapper>
   );
