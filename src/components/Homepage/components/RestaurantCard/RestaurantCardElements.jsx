@@ -1,16 +1,10 @@
 import styled from "styled-components";
 
 export const RestaurantCardWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  border: 1px solid black;
   width: 12rem;
-  height: 10rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 1rem 1rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
   text-align: center;
   border: 1px solid black;
   border-radius: 22px;
@@ -25,6 +19,11 @@ export const RestaurantCardWrapper = styled.div`
 export const RestaurantName = styled.div`
   font-weight: bold;
   font-size: 1.1rem;
+  padding: 1rem 1rem;
+  img {
+    display: block;
+    margin: 0 auto 1rem;
+  }
 `;
 export const RestaurantAddress = styled.div`
   font-size: 0.9rem;

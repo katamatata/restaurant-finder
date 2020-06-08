@@ -1,25 +1,30 @@
-import React from "react";
-import { ListWrapper } from "./RestaurantListElements";
-import RestaurantCard from "../RestaurantCard";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { ContentWrapper } from "../../../../common";
+
+import { ListWrapper, Loading } from "./RestaurantListElements";
+import RestaurantCard from "../RestaurantCard";
+
+const RESTAURANTS_API =
+  "https://redi-final-restaurants.herokuapp.com/restaurants";
+
 export const RestaurantList = (props) => {
-  const RESTAURANTS_API =
-    "https://redi-final-restaurants.herokuapp.com/restaurants";
+  const [restaurantList, setRestaurantList] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searchValue, setSearchValue] = useState(props.searchValue);
 
-  const [restaurantList, setRestaurantList] = React.useState([]);
-  const [searchValue, setSearchValue] = React.useState(props.searchValue);
-
-  React.useEffect(() => {
-    async function fetchData() {
+  useEffect(() => {
+    const fetchData = async () => {
       const response = await fetch(RESTAURANTS_API);
       const data = await response.json();
       setRestaurantList(data.results);
-    }
+      setLoading(false);
+    };
     fetchData();
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setSearchValue(props.searchValue);
   }, [props.searchValue]);
 
@@ -33,13 +38,20 @@ export const RestaurantList = (props) => {
     return item;
   };
 
-  return (
-    <ListWrapper>
-      {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
-        <Link to={`/${item.id}`} key={item.id}>
-          <RestaurantCard card={item} key={item.id} />
-        </Link>
-      ))}
-    </ListWrapper>
+  return loading ? (
+    <Loading src="./loading.svg" alt="Loading" />
+  ) : (
+    <ContentWrapper>
+      <ListWrapper>
+        {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
+          <Link
+            to={{ pathname: `/${item.id}`, state: { restaraunt: item } }}
+            key={item.id}
+          >
+            <RestaurantCard card={item} key={item.id} />
+          </Link>
+        ))}
+      </ListWrapper>
+    </ContentWrapper>
   );
 };

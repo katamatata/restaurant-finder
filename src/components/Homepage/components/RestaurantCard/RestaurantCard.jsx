@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   RestaurantCardWrapper,
   RestaurantName,
@@ -7,16 +8,18 @@ import {
   AddressBlock,
 } from "./RestaurantCardElements";
 
-export const RestaurantCard = (props) => {
+export const RestaurantCard = ({ card }) => {
+  const { name, icon, formatted_address } = card;
+
   return (
     <RestaurantCardWrapper>
       <div>
-        <img src={props.card.icon} alt={props.card.name} />
+        <img src={icon} alt={name} />
       </div>
-      <RestaurantName>{props.card.name}</RestaurantName>
+      <RestaurantName>{name}</RestaurantName>
       <AddressBlock>
         <AddressImage src="./address.png" alt="Address" />
-        <RestaurantAddress>{props.card.formatted_address}</RestaurantAddress>
+        <RestaurantAddress>{formatted_address}</RestaurantAddress>
       </AddressBlock>
     </RestaurantCardWrapper>
   );
