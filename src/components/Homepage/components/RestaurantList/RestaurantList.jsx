@@ -19,10 +19,9 @@ export const RestaurantList = (props) => {
       const response = await fetch(RESTAURANTS_API);
       const data = await response.json();
       setRestaurantList(data.results);
+      setLoading(false);
     };
-
     fetchData();
-    setLoading(false);
   }, []);
 
   useEffect(() => {
