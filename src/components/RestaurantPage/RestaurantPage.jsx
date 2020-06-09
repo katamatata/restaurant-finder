@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, Redirect } from "react-router-dom";
+import { useLocation, Redirect } from "react-router-dom";
 
 import { ContentWrapper } from "../../common";
 
@@ -7,16 +7,18 @@ import Info from "./components/Info";
 import TopImage from "./components/TopImage";
 import Images from "./components/Images";
 
+import { NavigationLink } from "./RestaurantPageElements";
+
 export const RestaurantPage = () => {
   const { state } = useLocation();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [restaraunt, setRestaraunt] = useState(null);
+  const [restaurant, setrestaurant] = useState(null);
 
   useEffect(() => {
-    if (state?.restaraunt) {
-      setRestaraunt(state.restaraunt);
+    if (state?.restaurant) {
+      setrestaurant(state.restaurant);
       setError(null);
     } else {
       setError(true);
@@ -33,12 +35,16 @@ export const RestaurantPage = () => {
   ) : (
     <>
       <ContentWrapper>
-        <Link to={"/"}>All restaurants</Link>
+        <NavigationLink to={"/"}>All restaurants</NavigationLink>
       </ContentWrapper>
       <TopImage>
-        <Info info={restaraunt} />
+        <ContentWrapper>
+          <Info info={restaurant} />
+        </ContentWrapper>
       </TopImage>
-      <Images urls={restaraunt.photos[0].links} />
+      <ContentWrapper>
+        <Images urls={restaurant.photos[0].links} />
+      </ContentWrapper>
     </>
   );
 };

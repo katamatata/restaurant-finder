@@ -1,10 +1,12 @@
 import React from "react";
 
+import { ImagesWrapper, Image } from "./ImagesElements";
+
 export const Images = ({ urls }) =>
   urls.length ? (
-    <div>
+    <ImagesWrapper>
       {urls.map((url) => (
-        <img src={url} width="200px" key={url} />
+        <Image src={url} key={url} alt="" />
       ))}
-    </div>
+    </ImagesWrapper>
   ) : null;

@@ -1,7 +1,36 @@
 import styled from "styled-components";
 
 export const InfoWrapper = styled.div`
+  font-size: 14px;
   background-color: white;
-  padding: 1rem;
+  border-radius: 3px;
+  padding: 24px 24px;
   width: 50%;
+`;
+
+export const Name = styled.h1`
+  font-size: 30px;
+  font-weight: 900;
+`;
+
+export const Rating = styled.div`
+  padding-top: 8px;
+`;
+
+export const InfoBlock = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+`;
+
+export const InfoBlockItem = styled.p`
+  text-transform: lowercase;
+`;
+
+export const SpanDot = styled.p`
+  padding: 0 5px;
+`;
+
+export const AddressBlock = styled.div`
+  padding-top: 8px;
 `;
