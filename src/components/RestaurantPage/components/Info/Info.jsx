@@ -8,6 +8,7 @@ import {
   InfoBlockItem,
   SpanDot,
   AddressBlock,
+  Icon,
 } from "./InfoElements";
 
 export const Info = ({ info }) => {
@@ -28,11 +29,12 @@ export const Info = ({ info }) => {
     <InfoWrapper>
       <Name>{name}</Name>
       <Rating>
-        Star icon {rating} ({user_ratings_total} ratings)
+        <Icon src="/star.png" />
+        {rating}({user_ratings_total} ratings)
       </Rating>
       <InfoBlock>
         <InfoBlockItem>
-          {[...new Array(price_level)].map((_) => "$")}
+          {[...new Array(price_level)].map((_) => "€")}
         </InfoBlockItem>
         <SpanDot>&middot;</SpanDot>
         <InfoBlockItem>{cuisine}</InfoBlockItem>
