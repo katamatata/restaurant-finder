@@ -17,3 +17,8 @@ export const Category = styled.div`
     background-color: ${({ active }) => (!active ? "#f5f5f5;" : "none")};
   }
 `;
+
+export const Loading = styled.img`
+  display: block;
+  margin: 30px auto;
+`;
