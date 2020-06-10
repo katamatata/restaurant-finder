@@ -8,4 +8,5 @@ export const TopImageWrapper = styled.div`
   min-height: 400px;
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 `;

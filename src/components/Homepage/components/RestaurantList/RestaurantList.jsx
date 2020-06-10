@@ -45,7 +45,7 @@ export const RestaurantList = (props) => {
       <ListWrapper>
         {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
           <Link
-            to={{ pathname: `/${item.id}`, state: { restaraunt: item } }}
+            to={{ pathname: `/${item.id}`, state: { restaurant: item } }}
             key={item.id}
           >
             <RestaurantCard card={item} key={item.id} />
