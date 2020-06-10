@@ -15,6 +15,9 @@ export const Name = styled.h1`
 
 export const Rating = styled.div`
   padding-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 export const InfoBlock = styled.div`
@@ -33,4 +36,12 @@ export const SpanDot = styled.p`
 
 export const AddressBlock = styled.div`
   padding-top: 8px;
+`;
+
+export const Icon = styled.img`
+  width: 16px;
+  display: block;
+  margin-right: 5px;
+  position: relative;
+  top: -1px;
 `;

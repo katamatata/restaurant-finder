@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchBarWrapper, SearchBarInput } from "./SearchBarElements";
+import { SearchBarInput } from "./SearchBarElements";
 
 export const SearchBar = (props) => {
   const [inputValue, setInputValue] = React.useState("");
@@ -10,13 +10,11 @@ export const SearchBar = (props) => {
   };
 
   return (
-    <SearchBarWrapper>
-      <SearchBarInput
-        type="text"
-        onChange={(event) => handleSearchInput(event)}
-        value={inputValue}
-        placeholder="Please type the name of the restaurant or cuisine type here"
-      />
-    </SearchBarWrapper>
+    <SearchBarInput
+      type="text"
+      onChange={(event) => handleSearchInput(event)}
+      value={inputValue}
+      placeholder="Please type the name of the restaurant or cuisine type here"
+    />
   );
 };

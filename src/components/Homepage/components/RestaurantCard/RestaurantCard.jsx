@@ -1,26 +1,25 @@
 import React from "react";
 
 import {
-  RestaurantCardWrapper,
-  RestaurantName,
-  RestaurantAddress,
-  AddressImage,
+  Restaurant,
+  Name,
+  Address,
   AddressBlock,
+  Inner,
 } from "./RestaurantCardElements";
 
 export const RestaurantCard = ({ card }) => {
-  const { name, icon, formatted_address } = card;
+  const { name, formatted_address, photos } = card;
+  const imageUrl = photos[0].links[0];
 
   return (
-    <RestaurantCardWrapper>
-      <div>
-        <img src={icon} alt={name} />
-      </div>
-      <RestaurantName>{name}</RestaurantName>
-      <AddressBlock>
-        <AddressImage src="./address.png" alt="Address" />
-        <RestaurantAddress>{formatted_address}</RestaurantAddress>
-      </AddressBlock>
-    </RestaurantCardWrapper>
+    <Restaurant imageUrl={imageUrl}>
+      <Inner>
+        <Name>{name}</Name>
+        <AddressBlock>
+          <Address>{formatted_address}</Address>
+        </AddressBlock>
+      </Inner>
+    </Restaurant>
   );
 };

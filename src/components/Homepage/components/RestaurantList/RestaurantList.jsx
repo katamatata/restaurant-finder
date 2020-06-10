@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { ContentWrapper } from "../../../../common";
 
-import { ListWrapper, Loading } from "./RestaurantListElements";
+import { ListWrapper, Loading, StyledLink } from "./RestaurantListElements";
 import RestaurantCard from "../RestaurantCard";
 
 const RESTAURANTS_API =
@@ -44,12 +43,12 @@ export const RestaurantList = (props) => {
     <ContentWrapper>
       <ListWrapper>
         {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
-          <Link
+          <StyledLink
             to={{ pathname: `/${item.id}`, state: { restaurant: item } }}
             key={item.id}
           >
             <RestaurantCard card={item} key={item.id} />
-          </Link>
+          </StyledLink>
         ))}
       </ListWrapper>
     </ContentWrapper>
