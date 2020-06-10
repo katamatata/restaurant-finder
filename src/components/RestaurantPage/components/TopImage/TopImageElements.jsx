@@ -5,7 +5,7 @@ export const TopImageWrapper = styled.div`
   background-color: orange;
   background-size: cover;
   background-position: center;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   margin-bottom: 30px;

@@ -26,6 +26,7 @@ export const Restaurant = styled.div`
     background: black;
     opacity: 0.5;
     z-imdex: 1;
+    border-radius: 3px;
   }
   &:hover {
     transform: scale(1.05);

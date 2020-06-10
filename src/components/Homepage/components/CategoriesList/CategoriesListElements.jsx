@@ -12,7 +12,7 @@ export const Category = styled.div`
   margin: 0 16px;
   text-align: center;
   background-color: none;
-  border-radius: 22px;
+  border-radius: 16px;
   cursor: pointer;
   background-color: ${({ active }) => (active ? "orange" : "none")};
   transition: All 0.5s ease;

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding-left: 5rem;
-  padding-right: 5rem;
-  background-color: orange;
+  background-color: #80adff;
   height: 300px;
+`;
+
+export const Outer = styled.div`
   display: flex;
 `;
 
