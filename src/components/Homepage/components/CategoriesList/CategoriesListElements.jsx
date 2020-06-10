@@ -14,6 +14,11 @@ export const Category = styled.div`
   cursor: pointer;
   background-color: ${({ active }) => (active ? "orange" : "none")};
   &:hover {
-    background-color: #f5f5f5;
+    background-color: ${({ active }) => (!active ? "#f5f5f5;" : "none")};
   }
+`;
+
+export const Loading = styled.img`
+  display: block;
+  margin: 30px auto;
 `;
