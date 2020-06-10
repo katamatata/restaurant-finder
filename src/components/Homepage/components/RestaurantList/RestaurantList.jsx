@@ -12,6 +12,9 @@ export const RestaurantList = (props) => {
   const [restaurantList, setRestaurantList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState(props.searchValue);
+  const [selectedCategory, setSelectedCategory] = React.useState(
+    props.selectedCategory
+  );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +30,10 @@ export const RestaurantList = (props) => {
     setSearchValue(props.searchValue);
   }, [props.searchValue]);
 
+  useEffect(() => {
+    setSelectedCategory(props.selectedCategory);
+  }, [props.selectedCategory]);
+
   const filterRestaurantsSearchBar = (item) => {
     if (searchValue !== "") {
       return (
@@ -37,19 +44,29 @@ export const RestaurantList = (props) => {
     return item;
   };
 
+  const filterRestaurantsCategory = (item) => {
+    if (selectedCategory !== null) {
+      return item.cuisine.toLowerCase() === selectedCategory.toLowerCase();
+    }
+    return item;
+  };
+
   return loading ? (
     <Loading src="./loading.svg" alt="Loading" />
   ) : (
     <ContentWrapper>
       <ListWrapper>
-        {restaurantList.filter(filterRestaurantsSearchBar).map((item) => (
-          <StyledLink
-            to={{ pathname: `/${item.id}`, state: { restaurant: item } }}
-            key={item.id}
-          >
-            <RestaurantCard card={item} key={item.id} />
-          </StyledLink>
-        ))}
+        {restaurantList
+          .filter(filterRestaurantsCategory)
+          .filter(filterRestaurantsSearchBar)
+          .map((item) => (
+            <StyledLink
+              to={{ pathname: `/${item.id}`, state: { restaurant: item } }}
+              key={item.id}
+            >
+              <RestaurantCard card={item} key={item.id} />
+            </StyledLink>
+          ))}
       </ListWrapper>
     </ContentWrapper>
   );
