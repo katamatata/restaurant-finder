@@ -9,13 +9,13 @@ export const Homepage = () => {
   const [selectedCategory, setSelectedCategory] = React.useState(null);
 
   return (
-    <div>
+    <>
       <HomepageImage setSearchValue={setSearchValue} />
       <CategoriesList setSelectedCategory={setSelectedCategory} />
       <RestaurantList
         selectedCategory={selectedCategory}
         searchValue={searchValue}
       />
-    </div>
+    </>
   );
 };

@@ -1,8 +1,8 @@
 import React from "react";
 
+import { Subtitle } from '../../../../common';
 import {
   InfoWrapper,
-  Name,
   Rating,
   InfoBlock,
   InfoBlockItem,
@@ -27,7 +27,7 @@ export const Info = ({ info }) => {
 
   return (
     <InfoWrapper>
-      <Name>{name}</Name>
+      <Subtitle>{name}</Subtitle>
       <Rating>
         <Icon src="/star.png" />
         {rating}({user_ratings_total} ratings)

@@ -8,11 +8,6 @@ export const InfoWrapper = styled.div`
   width: 50%;
 `;
 
-export const Name = styled.h1`
-  font-size: 30px;
-  font-weight: 900;
-`;
-
 export const Rating = styled.div`
   padding-top: 8px;
   display: flex;

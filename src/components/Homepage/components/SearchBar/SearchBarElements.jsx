@@ -1,15 +1,14 @@
 import styled from "styled-components";
 
-export const SearchBarInput = styled.input`
-  height: 3rem;
+export const SearchInput = styled.input`
+  height: 48px;
   width: 100%;
-  display: block;
-  font-size: 1.2rem;
+  font-size: 15px;
   border: none;
-  padding-left: 1rem;
-  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 8px;
+  padding-left: 16px;
+  border-radius: 4px;
   &::placeholder {
-    font-style: italic;
     opacity: 0.5;
   }
 `;

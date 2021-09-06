@@ -14,10 +14,11 @@ export const Category = styled.div`
   background-color: none;
   border-radius: 16px;
   cursor: pointer;
-  background-color: ${({ active }) => (active ? "orange" : "none")};
+  color: ${({ active }) => (active ? "#fff" : "#272844")};
+  background-color: ${({ active }) => (active ? "#ea5a42" : "none")};
   transition: All 0.5s ease;
   &:hover {
-    background-color: ${({ active }) => (!active ? "#f5f5f5;" : "none")};
+    background-color: ${({ active }) => (!active ? "#f5f5f5;" : "#df7461")};
   }
 `;
 

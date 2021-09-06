@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchBarInput } from "./SearchBarElements";
+import { SearchInput } from "./SearchBarElements";
 
 export const SearchBar = (props) => {
   const [inputValue, setInputValue] = React.useState("");
@@ -10,11 +10,11 @@ export const SearchBar = (props) => {
   };
 
   return (
-    <SearchBarInput
+    <SearchInput
       type="text"
       onChange={(event) => handleSearchInput(event)}
       value={inputValue}
-      placeholder="Please type the name of the restaurant or cuisine type here"
+      placeholder="Search by the name of the restaurant or cuisine type"
     />
   );
 };

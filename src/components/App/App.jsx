@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Homepage from "./components/Homepage";
-import RestaurantPage from "./components/RestaurantPage";
+import Header from "../Header";
+import Homepage from "../Homepage";
+import RestaurantPage from "../RestaurantPage";
 
-const App = () => (
+import { Body } from './AppElements';
+
+export const App = () => (
+ <Body>
   <BrowserRouter>
     <Header />
     <Switch>
@@ -17,6 +20,5 @@ const App = () => (
       </Route>
     </Switch>
   </BrowserRouter>
+ </Body>
 );
-
-export default App;
