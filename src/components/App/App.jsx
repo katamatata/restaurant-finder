@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Header from "../Header";
 import Homepage from "../Homepage";
 import RestaurantPage from "../RestaurantPage";
+import Footer from "../Footer";
 
 import { Body } from './AppElements';
 
@@ -19,6 +20,7 @@ export const App = () => (
         <RestaurantPage />
       </Route>
     </Switch>
+    <Footer />
   </BrowserRouter>
  </Body>
 );

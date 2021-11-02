@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentWrapper, Title } from "../../../../common";
-import SearchBar from "../SearchBar";
+// import SearchBar from "../SearchBar";
 
 import { Wrapper, Image, Inner, TextContent, Text, InputContent, ImageContent, StyledLink, ImageCredit } from "./HomepageImageElements";
 
@@ -14,12 +14,12 @@ export const HomepageImage = (props) => {
             <Text>
               BerlinEats helps Berliners discover restaurants in need, skipping expensive delivery platforms and connecting them to great food.
             </Text>
-            <InputContent>
+            {/* <InputContent>
               <SearchBar setSearchValue={props.setSearchValue} />
-            </InputContent>
+            </InputContent> */}
           </TextContent>
           <ImageContent>
-            <Image src="./choosing-food.png" alt="Woman is choosing food" />
+            <Image src="./assets/images/choosing-food.png" alt="Woman is choosing food" />
             <ImageCredit>
               Art by <StyledLink href="https://www.freepik.com/pikisuperstar" target="_blank">pikisuperstar</StyledLink>
             </ImageCredit>

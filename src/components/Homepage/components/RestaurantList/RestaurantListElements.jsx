@@ -6,7 +6,6 @@ export const ListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 16px;
 `;
 
 export const Loading = styled.img`

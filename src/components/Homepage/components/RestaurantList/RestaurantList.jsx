@@ -52,7 +52,7 @@ export const RestaurantList = (props) => {
   };
 
   return loading ? (
-    <Loading src="./loading.svg" alt="Loading" />
+    <Loading src="./assets/spinner.gif" alt="Loading" />
   ) : (
     <ContentWrapper>
       <ListWrapper>

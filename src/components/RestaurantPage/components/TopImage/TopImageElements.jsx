@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const TopImageWrapper = styled.div`
-  background-image: url("restaurant-image.jpg");
-  background-color: orange;
+  // background-image: url("assets/images/restaurant-image.jpg");
+  background-color: #F4DB7D;
   background-size: cover;
   background-position: center;
   min-height: 300px;

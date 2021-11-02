@@ -29,7 +29,7 @@ export const Info = ({ info }) => {
     <InfoWrapper>
       <Subtitle>{name}</Subtitle>
       <Rating>
-        <Icon src="/star.png" />
+        <Icon src="/assets/icons/star.png" />
         {rating}({user_ratings_total} ratings)
       </Rating>
       <InfoBlock>

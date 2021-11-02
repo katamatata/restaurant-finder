@@ -34,7 +34,7 @@ export const AddressBlock = styled.div`
 `;
 
 export const Icon = styled.img`
-  width: 16px;
+  // width: 16px;
   display: block;
   margin-right: 5px;
   position: relative;

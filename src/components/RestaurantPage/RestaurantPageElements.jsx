@@ -8,6 +8,6 @@ export const NavigationLink = styled(Link)`
   font-size: 14px;
   margin-bottom: 16px;
   &:hover {
-    color: orange;
+    color: #F15743;
   }
 `;

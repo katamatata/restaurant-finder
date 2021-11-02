@@ -14,7 +14,7 @@ export const SearchBar = (props) => {
       type="text"
       onChange={(event) => handleSearchInput(event)}
       value={inputValue}
-      placeholder="Search by the name of the restaurant or cuisine type"
+      placeholder="Restaurant or cuisine..."
     />
   );
 };

@@ -31,17 +31,17 @@ export const RestaurantPage = () => {
   }
 
   return loading ? (
-    <img src="./loading.svg" alt="Loading" />
+    <img src="./assets/icons/loading.svg" alt="Loading" />
   ) : (
     <>
-      <ContentWrapper>
-        <NavigationLink to={"/"}>All restaurants</NavigationLink>
-      </ContentWrapper>
       <TopImage>
         <ContentWrapper>
           <Info info={restaurant} />
         </ContentWrapper>
       </TopImage>
+      <ContentWrapper>
+        <NavigationLink to={"/"}>All restaurants</NavigationLink>
+      </ContentWrapper>
       <ContentWrapper>
         <Images urls={restaurant.photos[0].links} />
       </ContentWrapper>

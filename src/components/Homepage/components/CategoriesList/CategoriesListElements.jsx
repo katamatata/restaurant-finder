@@ -8,6 +8,7 @@ export const CategoriesWrapper = styled.div`
 `;
 
 export const Category = styled.div`
+  font-size: 15px;
   padding: 9px 18px;
   margin: 0 16px;
   text-align: center;
