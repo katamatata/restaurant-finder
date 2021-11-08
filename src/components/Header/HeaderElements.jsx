@@ -6,6 +6,10 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 35px;
-  cursor: pointer;
+  height: 32px;
+`;
+
+export const Inner = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;

@@ -1,7 +1,9 @@
 import React from "react";
+
 import { ContentWrapper } from "../../../../common";
-import { CategoriesWrapper, Category } from "./CategoriesListElements";
-import { Loading } from "./CategoriesListElements";
+import { SearchBar } from "../SearchBar/SearchBar";
+
+import { Container, CategoriesWrapper, Category, InputWrapper, Loading } from "./CategoriesListElements";
 
 export const CategoriesList = (props) => {
   const [selectedCategory, setSelectedCategory] = React.useState(null);
@@ -43,20 +45,25 @@ export const CategoriesList = (props) => {
     <Loading src="./assets/spinner.gif" alt="Loading" />
   ) : (
     <ContentWrapper>
-      <CategoriesWrapper>
-        {categories.map((item) => (
-          <Category
-            key={item}
-            onClick={() => handleSelectedCategory(item)}
-            active={
-              item === selectedCategory ||
-              (item === "All" && selectedCategory === null)
-            }
-          >
-            {item}
-          </Category>
-        ))}
-      </CategoriesWrapper>
+      <Container>
+        <CategoriesWrapper>
+          {categories.map((item) => (
+            <Category
+              key={item}
+              onClick={() => handleSelectedCategory(item)}
+              active={
+                item === selectedCategory ||
+                (item === "All" && selectedCategory === null)
+              }
+            >
+              {item}
+            </Category>
+          ))}
+        </CategoriesWrapper>
+        <InputWrapper>
+          <SearchBar setSearchValue={props.setSearchValue} />
+        </InputWrapper>
+      </Container>
     </ContentWrapper>
   );
 };

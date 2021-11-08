@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
-  background-color: #000;
+  background-color: #272844;
   height: 70px;
   margin-top: 20px;
   display: flex;
@@ -9,8 +9,9 @@ export const FooterWrapper = styled.div`
 `;
 
 export const Text = styled.p`
-  color: #fff;
+  color: #FFF;
   padding: 28px 0;
+  font-size: 15px;
 `;
 
 export const Span = styled.span`

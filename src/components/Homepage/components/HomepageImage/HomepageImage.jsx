@@ -1,8 +1,7 @@
 import React from "react";
 import { ContentWrapper, Title } from "../../../../common";
-// import SearchBar from "../SearchBar";
 
-import { Wrapper, Image, Inner, TextContent, Text, InputContent, ImageContent, StyledLink, ImageCredit } from "./HomepageImageElements";
+import { Wrapper, Image, Inner, TextContent, Text, ImageContent, StyledLink, ImageCredit } from "./HomepageImageElements";
 
 export const HomepageImage = (props) => {
   return (
@@ -14,9 +13,6 @@ export const HomepageImage = (props) => {
             <Text>
               BerlinEats helps Berliners discover restaurants in need, skipping expensive delivery platforms and connecting them to great food.
             </Text>
-            {/* <InputContent>
-              <SearchBar setSearchValue={props.setSearchValue} />
-            </InputContent> */}
           </TextContent>
           <ImageContent>
             <Image src="./assets/images/choosing-food.png" alt="Woman is choosing food" />

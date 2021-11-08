@@ -10,8 +10,11 @@ export const Homepage = () => {
 
   return (
     <>
-      <HomepageImage setSearchValue={setSearchValue} />
-      <CategoriesList setSelectedCategory={setSelectedCategory} />
+      <HomepageImage />
+      <CategoriesList 
+        setSelectedCategory={setSelectedCategory} 
+        setSearchValue={setSearchValue} 
+      />
       <RestaurantList
         selectedCategory={selectedCategory}
         searchValue={searchValue}
