@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import { ContentWrapper } from "../../../../common";
+import RestaurantCard from "./components/RestaurantCard";
 
 import { ListWrapper, Loading, StyledLink } from "./RestaurantListElements";
-import RestaurantCard from "../RestaurantCard";
 
 const RESTAURANTS_API =
   "https://redi-final-restaurants.herokuapp.com/restaurants";

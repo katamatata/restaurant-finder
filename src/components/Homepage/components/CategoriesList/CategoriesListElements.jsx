@@ -26,7 +26,7 @@ export const Category = styled.div`
   background-color: ${({ active }) => (active ? "#ea5a42" : "none")};
   transition: All 0.5s ease;
   &:hover {
-    background-color: ${({ active }) => (!active ? "#f5f5f5;" : "#df7461")};
+    background-color: ${({ active }) => (!active ? "#f5f5f5" : "#df7461")};
   }
 `;
 

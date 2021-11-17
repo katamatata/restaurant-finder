@@ -14,5 +14,5 @@ export const Loading = styled.img`
 `;
 
 export const StyledLink = styled(Link)`
-  color: black;
+  color: #272844;
 `;

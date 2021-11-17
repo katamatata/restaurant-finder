@@ -1,5 +1,5 @@
 import React from "react";
-import { SearchInput } from "./SearchBarElements";
+import { Wrapper, InputBase, SearchIcon } from "./SearchBarElements";
 
 export const SearchBar = (props) => {
   const [inputValue, setInputValue] = React.useState("");
@@ -10,11 +10,14 @@ export const SearchBar = (props) => {
   };
 
   return (
-    <SearchInput
-      type="text"
-      onChange={(event) => handleSearchInput(event)}
-      value={inputValue}
-      placeholder="Restaurant or cuisine..."
-    />
+    <Wrapper>
+      <SearchIcon src="./assets/icons/search.svg" alt="Search icon"/>
+      <InputBase
+        type="text"
+        onChange={(event) => handleSearchInput(event)}
+        value={inputValue}
+        placeholder="Restaurant or cuisine..."
+      />
+    </Wrapper>
   );
 };
