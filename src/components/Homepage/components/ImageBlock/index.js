@@ -1,0 +1,1 @@
+export { ImageBlock as default } from './ImageBlock';

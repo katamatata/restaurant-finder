@@ -1,9 +1,19 @@
 import React from "react";
+
 import { ContentWrapper, Title } from "../../../../common";
 
-import { Wrapper, Image, Inner, TextContent, Text, ImageContent, StyledLink, ImageCredit } from "./HomepageImageElements";
+import { 
+  Wrapper, 
+  Image, 
+  Inner, 
+  TextContent, 
+  Text, 
+  ImageContent, 
+  StyledLink, 
+  ImageCredit 
+} from "./ImageBlockElements";
 
-export const HomepageImage = (props) => {
+export const ImageBlock = () => {
   return (
     <Wrapper>
       <ContentWrapper>

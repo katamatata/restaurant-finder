@@ -8,11 +8,6 @@ export const ListWrapper = styled.div`
   justify-content: center;
 `;
 
-export const Loading = styled.img`
-  display: block;
-  margin: 30px auto;
-`;
-
 export const StyledLink = styled(Link)`
   color: #272844;
 `;

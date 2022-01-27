@@ -1,64 +1,71 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { ContentWrapper } from "../../../../common";
+import { ContentWrapper, Loading } from "../../../../common";
 import RestaurantCard from "./components/RestaurantCard";
 
-import { ListWrapper, Loading, StyledLink } from "./RestaurantListElements";
+import { ListWrapper, StyledLink } from "./RestaurantListElements";
 
-const RESTAURANTS_API =
-  "https://redi-final-restaurants.herokuapp.com/restaurants";
+export const RestaurantList = ({
+  loading,
+  restaurants,
+  searchValue, 
+  selectedCategory, 
+  selectedServiceType, 
+  selectedDietary 
+}) => {
 
-export const RestaurantList = (props) => {
-  const [restaurantList, setRestaurantList] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [searchValue, setSearchValue] = useState(props.searchValue);
-  const [selectedCategory, setSelectedCategory] = React.useState(
-    props.selectedCategory
-  );
+  // state for filtered restaurants?
+  // effects for each filter?
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(RESTAURANTS_API);
-      const data = await response.json();
-      setRestaurantList(data.results);
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    setSearchValue(props.searchValue);
-  }, [props.searchValue]);
-
-  useEffect(() => {
-    setSelectedCategory(props.selectedCategory);
-  }, [props.selectedCategory]);
-
-  const filterRestaurantsSearchBar = (item) => {
+  const filterBySearch = (item) => {
     if (searchValue !== "") {
       return (
         item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        item.cuisine.toLowerCase().includes(searchValue.toLowerCase())
+        item.cuisine.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.dietaryRestrictions.toLowerCase().includes(searchValue.toLowerCase())
       );
     }
-    return item;
+    return true;
   };
 
-  const filterRestaurantsCategory = (item) => {
-    if (selectedCategory !== null) {
+  const filterByCategory = (item) => {
+    if (selectedCategory !== "all") {
       return item.cuisine.toLowerCase() === selectedCategory.toLowerCase();
     }
-    return item;
+    return true;
   };
 
+  const filterByServiceType = (item) => {
+    if (selectedServiceType === "Delivery") {
+      return item.delivery;
+    } else if (selectedServiceType === "Pickup") {
+      return item.pickup;
+    } else if (selectedServiceType === "Dine-in") {
+      return !item.delivery && !item.pickup;
+    } 
+    return true;
+  }
+
+  const filterByDietary = (item) => {
+    if (selectedDietary !== "") {
+      return item.dietaryRestrictions.toLowerCase() === selectedDietary.toLowerCase();
+    }
+    return true;
+  }
+
+  const filteredRestaurants = restaurants
+    .filter(filterBySearch)
+    .filter(filterByCategory)
+    .filter(filterByServiceType)
+    .filter(filterByDietary)
+
+
   return loading ? (
-    <Loading src="./assets/spinner.gif" alt="Loading" />
+    <Loading src="./assets/spinner.gif" alt="Loading in progress" />
   ) : (
     <ContentWrapper>
       <ListWrapper>
-        {restaurantList
-          .filter(filterRestaurantsCategory)
-          .filter(filterRestaurantsSearchBar)
+        {filteredRestaurants
           .map((item) => (
             <StyledLink
               to={{ pathname: `/${item.id}`, state: { restaurant: item } }}
@@ -66,8 +73,11 @@ export const RestaurantList = (props) => {
             >
               <RestaurantCard card={item} key={item.id} />
             </StyledLink>
-          ))}
+        ))}
       </ListWrapper>
+      {filteredRestaurants.length === 0 && !loading && (
+        <div>No results match your search criteria.</div>
+      )}
     </ContentWrapper>
   );
 };

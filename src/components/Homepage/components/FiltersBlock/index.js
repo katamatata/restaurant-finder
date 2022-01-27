@@ -1,0 +1,1 @@
+export { FiltersBlock as default } from "./FiltersBlock";

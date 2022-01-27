@@ -12,15 +12,16 @@ export const SearchIcon = styled.img`
 
 export const InputBase = styled.input`
   width: 100%;
-  font-size: 12px;
-  border: 1px solid #F15743;
+  font-size: 13px;
+  border: 1px solid #E8EBEB;
   padding: 6px 14px 6px 35px;
   border-radius: 8px;
   &::placeholder {
     color: #ABADAD;
     opacity: 1;
   }
-  &:focus{
+  &:focus {
+    border: 1px solid #F15743;
     box-shadow: 0 0 2px #F15743;
   }
 `;
